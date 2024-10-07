@@ -1,0 +1,52 @@
+USE AssignmentPart1
+GO
+
+
+--Check if a value is NOT NULL
+Select count(*) AS TotalRows
+from Dbo.OrderItem
+Where OrderNumber IS NULL;
+
+--Check the schema of OrderItem
+SELECT
+    COLUMN_NAME,
+    DATA_TYPE,
+    CHARACTER_MAXIMUM_LENGTH,
+    NUMERIC_PRECISION,
+    NUMERIC_SCALE
+FROM
+    INFORMATION_SCHEMA.COLUMNS
+WHERE
+    TABLE_NAME = 'OrderItem' AND
+    TABLE_SCHEMA = 'Dbo';
+
+
+--Check the schema of CustomerCity
+SELECT
+    COLUMN_NAME,
+    DATA_TYPE,
+    CHARACTER_MAXIMUM_LENGTH,
+    NUMERIC_PRECISION,
+    NUMERIC_SCALE
+FROM
+    INFORMATION_SCHEMA.COLUMNS
+WHERE
+    TABLE_NAME = 'CustomerCity' AND
+    TABLE_SCHEMA = 'Dbo';
+
+
+--Check the schema of Product
+SELECT
+    COLUMN_NAME,
+    DATA_TYPE,
+    CHARACTER_MAXIMUM_LENGTH,
+    NUMERIC_PRECISION,
+    NUMERIC_SCALE
+FROM
+    INFORMATION_SCHEMA.COLUMNS
+WHERE
+    TABLE_NAME = 'Product' AND
+    TABLE_SCHEMA = 'Dbo';
+
+
+
